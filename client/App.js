@@ -16,6 +16,33 @@ class App extends Component {
         this.state = {users: [], messages: [], text: '', name: ''};
     }
 
+    // nasłuchiwanie, po załadowaniu DOM  na zdarzenia message i update //
+    componentDidMount() {
+        socket.on('message', message => this.messageReceive(message));
+        socket.on('update', ({users}) => this.chatUpdate(users));
+    }
+
+    messageReceive(message) {
+        const messages = [message, ...this.state.messages];
+        this.setState({messages});
+    }
+
+    chatUpdate(users) {
+        this.setState({users});
+    }
+
+    // obsługa wysłania wiadomości //
+    handleMessageSubmit(message) {
+        const messages = [message, ...this.state.messages];
+        this.setState({messages});
+        socket.emit('message', message);
+    }
+
+    handleUserSubmit(name) {
+        this.setState({name});
+        socket.emit('join', name);
+    }
+
     render() {
         return this.state.name !== '' ? this.renderLayout() : this.renderUserForm();
     }
