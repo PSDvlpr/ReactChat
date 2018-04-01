@@ -13,7 +13,7 @@ class MessageForm extends Component {
         e.preventDefault();
         const message = {
             from: this.props.name,
-            text: this.props.text
+            text: this.state.text
         };
 
         this.props.onMessageSubmit(message);
