@@ -44,7 +44,7 @@ class App extends Component {
     }
 
     render() {
-        return this.state.name !== '' ? this.renderLayout() : this.renderUserForm();
+        return this.state.name !== '' ? this.renderLayout() : this.renderUserForm()
     }
 
     renderLayout() {
@@ -73,13 +73,13 @@ class App extends Component {
                     </div>
                 </div>
             </div>
-
         );
     }
 
     renderUserForm() {
         return (
-            <UserForm onUserSubmit={name => this.handleUserSubmit(name)} />)
+            <UserForm onUserSubmit={name => this.handleUserSubmit(name)} />
+        );
     }
 };
 
