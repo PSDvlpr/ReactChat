@@ -4,7 +4,7 @@ import styles from './UserForm.css';
 
 class UserForm extends Component {
     constructor(props) {
-        super(props) 
+        super(props); 
         this.state = {name: ''};
     }
 
