@@ -9,7 +9,7 @@ const Message = props => (
     </div>
 );
 
-const MessageList = props => {
+const MessageList = props => (
     <div className={styles.MessageList}>
         {
             props.messages.map((message, i) => {
@@ -23,6 +23,6 @@ const MessageList = props => {
             })
         }
     </div>
-};
+);
 
 export default MessageList;
