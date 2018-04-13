@@ -6,8 +6,10 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 const UserService = require('./UsersService');
+const MessageService = require('./MessageService');
 
 const userService = new UserService();
+const messageService = new MessageService();
 
 app.use(express.static(__dirname + '/public'));
 
@@ -20,6 +22,10 @@ io.on('connection', function(socket) {
         userService.addUser({
             id: socket.id,
             name
+        });
+
+        socket.emit('getMessages', {
+            messages: messageService.getAllMessages()
         });
 
         io.emit('update', {
@@ -40,6 +46,7 @@ io.on('connection', function(socket) {
             text: message.text,
             from: name
         });
+        messageService.addMessage(message);
     });
 });
 
