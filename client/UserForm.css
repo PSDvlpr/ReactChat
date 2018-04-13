@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Gaegu|Gamja+Flower');
+
 .UserForm {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    font-family: 'Gaegu', cursive;
+    font-size: 3em;
+    background-color: E4DCF2;
 }
 
 .UserInput {
@@ -12,4 +18,7 @@
     border: 0;
     border-bottom: 1px solid #ccc;
     width: 510px;
+    background-color: transparent;
+    font-family: 'Gamja Flower', cursive;
+    color: #000000;
 }

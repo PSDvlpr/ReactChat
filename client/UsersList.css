@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Gaegu|Gamja+Flower');
+
 .Users {
     display: flex;
     flex: 1;
@@ -5,12 +7,17 @@
     justify-content: flex-start;
     flex-direction: column;
     border-right: 1px solid #ccc;
+    font-family: 'Gamja Flower', cursive;
+
 }
 
 .UsersOnline {
     padding: 20px;
     text-align: center;
-    background: #ccc;
+    background: #8E7DAB;
+    color: #ffffff;
+    font-family: 'Gaegu', cursive;
+    font-size: 1.5em;
 }
 
 .UsersList {
@@ -23,4 +30,5 @@
     border-bottom: 1px solid #ccc;
     padding: 20px;
     margin: 0 0 0 20px;
+    font-style: 'Gamja Flower', cursive;
 }

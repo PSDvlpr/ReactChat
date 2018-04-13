@@ -60,7 +60,8 @@ class App extends Component {
                         ChatApp
                     </div>
                     <div className={styles.AppRoom}>
-                        AppRoom
+                        Welcome <br/>
+                        {this.state.name}
                     </div>
                 </div>
                 <div className={styles.AppBody}>

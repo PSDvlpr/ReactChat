@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import styles from './MessageForm.js';
+import styles from './MessageForm.css';
 
 
 class MessageForm extends Component {
@@ -27,15 +27,14 @@ class MessageForm extends Component {
     render() {
         return(
             <form className={styles.MessageForm} onSubmit={e => this.handleSubmit(e)}>
-                <input 
+                <input
                 className={styles.MessageInput}
                 onChange={e => this.changeHandler(e)}
                 value={this.state.text}
                 placeholder='Message'
                 />
-            </form>   
-        );
-    }
+            </form>
+    )}
 }
 
 export default MessageForm;

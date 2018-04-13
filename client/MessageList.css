@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower');
+
 .MessageList {
     flex: 1;
     display: flex;
@@ -5,4 +7,7 @@
     justify-content: flex-start;
     width: 75vw;
     padding: 20px;
+    background-color: #FBFCFF;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 1.3em;
 }

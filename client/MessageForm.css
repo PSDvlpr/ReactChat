@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower');
+
 .MessageForm {
     display: flex;
     flex-direction: row;
@@ -8,4 +10,8 @@
     padding: 20px;
     border: 0;
     border-top: 1px solid #ccc;
+    background: transparent;
+    color: #000000;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 1.5em;
 }

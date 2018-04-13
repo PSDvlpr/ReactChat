@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower');
+
 body {
     margin: 0;
 }
@@ -14,6 +16,10 @@ body {
     flex-direction: row;
     align-items: center;
     border-bottom: 1px solid #ccc;
+    background-color: #523C77;
+    color: #8E7DAB;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 2em;
 }
 
 .AppTitle {
@@ -23,6 +29,7 @@ body {
     justify-content: center;
     box-sizing: border-box;
     padding: 20px;
+    color: #ffffff;
 }
 
 .AppRoom {
@@ -31,6 +38,7 @@ body {
     justify-content: center;
     box-sizing: border-box;
     padding: 20px;
+    text-align: center;
 }
 
 .AppBody {
