@@ -7,6 +7,8 @@ const server = http.createServer(app);
 const io = socketIo(server);
 const UserService = require('./UsersService');
 const MessageService = require('./MessageService');
+const port = process.env.PORT || 3000;
+
 
 const userService = new UserService();
 const messageService = new MessageService();
@@ -50,6 +52,6 @@ io.on('connection', function(socket) {
     });
 });
 
-server.listen(3000, function(){
-    console.log('listening on *:3000');
+server.listen(port, function(){
+    console.log('listening on *:' + port);
 });
